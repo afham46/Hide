@@ -3,25 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Gallery</title>
+    <title>Netfilx Gallery</title>
     <link rel="stylesheet" href="index.css">
+    
 </head>
 <body>
     <div class="container">
         <div class="content">
-            <h1>Netflix Gallery</h1>
-            <div class="button-container" role="toolbar" aria-label="Filter buttons">
+            <h1>Netfilx Gallery</h1>
+
+            <div class="wrap" >
+                <div class="search">
+                   <input type="text" class="searchTerm" style="font-size: 20px; font-weight: bold;" placeholder="What are you looking for?" id="input">
+                   <button type="submit" class="searchButton">
+                     <i class="fa fa-search"></i>
+                  </button>
+                </div>
+            </div>
+            <h1 id="text"></h1>
+
+            <!-- <div class="button-container" role="toolbar" aria-label="Filter buttons">
                 <button class="button-71" onclick="show('all')" aria-label="Show all">ALL</button>
                 <button class="button-71" onclick="show('cartoons')" aria-label="Show cartoons">CARTOONS</button>
                 <button class="button-71" onclick="show('movies')" aria-label="Show movies">MOVIES</button>
+            </div> -->
+
+            <div class="button-container" role="toolbar" aria-label="Filter buttons">
+                <button class="button-71" onclick="alls()" aria-label="Show all">ALL</button>
+                <button class="button-71" onclick="filtermovie()" aria-label="Show cartoons">CARTOONS</button>
+                <button class="button-71" onclick="filtercartoon()" aria-label="Show movies">MOVIES</button>
             </div>
+        
+
             <div class="gallery">
-                <img src="./Gallery/Movies/movie1.avif" class="gallery-img movies" alt="Scene from Movie 1">
-                <img src="./Gallery/Anime 3D/cartoon1.jpg" class="gallery-img cartoons" alt="3D Cartoon character 1">
-                <img src="./Gallery/Movies/movie2.webp" class="gallery-img movies" alt="Scene from Movie 2">
-                <img src="./Gallery/Movies/movie3.avif" class="gallery-img movies" alt="Scene from Movie 3">
-                <img src="./Gallery/Anime 3D/cartoon2.jpg" class="gallery-img cartoons" alt="3D Cartoon character 2">
-                <img src="./Gallery/Anime 3D/cartoon3.jpeg" class="gallery-img cartoons" alt="3D Cartoon character 3">
+                <img src="./Gallery/Movies/movie1.avif"     id="movie"   class="gallery-img movies"     alt="Venom">
+                <img src="./Gallery/Anime 3D/cartoon1.jpg"  id="cartoon" class="gallery-img cartoons"   alt="Despicable Me 4">
+                <img src="./Gallery/Movies/movie2.webp"     id="movie"   class="gallery-img movies"     alt="Kraven">
+                <img src="./Gallery/Movies/movie3.avif"     id="movie"   class="gallery-img movies"     alt="Mufasa">
+                <img src="./Gallery/Anime 3D/cartoon2.jpg"  id="cartoon" class="gallery-img cartoons"   alt="Moana 2">
+                <img src="./Gallery/Anime 3D/cartoon3.jpeg" id="cartoon" class="gallery-img cartoons"   alt="Aladin">
+                <img src="./Gallery/Movies/movie4.cHJkLWVtcy1hc3NldHMvbW92aWVzLzE3ODE2OTQ0LWQyZWEtNDIxMi05NTQ1LTZkYWQ4OTdjZDdkZC5qcGc="     id="movie"   class="gallery-img movies" alt="Terrifier 3">
+                <img src="./Gallery/Anime 3D/cartoon4.jpeg"  id="cartoon" class="gallery-img cartoons"  alt="Luca">
             </div>
         </div>
     </div>
